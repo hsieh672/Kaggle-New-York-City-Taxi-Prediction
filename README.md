@@ -5,14 +5,17 @@ Tasked with predicting the fare amount for a taxi ride in New York City given th
 There is 55M data, we selected 6M to 15M of them for training due to lack of memories. Data preprocessing plays an essential role in the successful prediction of a model.
 
 #### 1. Remove missing data:  
-Remove data with missing features directly since we have a large number of data collections.
+Remove data with missing features directly since we have a large number of data collections.  
 #### 2. Remove outliers:  
-Remove locations outside New York City, unreasonable number of passengers, and fare amounts are considered outliers.
+Remove locations outside New York City, unreasonable number of passengers, and fare amounts are considered outliers.  
 (1) Remove passengers > 7 and < 1  
 ![passenger](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/number%20of%20passenger.png)
 (2) Remove the position outside the New York City  
-(3) Remove ‘fare_amount’ < 2.5 and > 500
-(4) Remove some locations on the water
+![location](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/location.png)
+(3) Remove ‘fare_amount’ < 2.5 and > 500  
+![fare](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/fare.png)
+(4) Remove some locations on the water  
+![on water](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/location.png)
 #### 3. Process time features:  
 The feature includes time and date information. Split ‘pickup_datatime’ into 4 new features: year, month, weekday, and hour. This approach adds useful information as features, they adds complexity to the model to enhance the precision of its predictions.  
 #### 4. Calculate Haversine distance:  
