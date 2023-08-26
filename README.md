@@ -9,7 +9,7 @@ Remove data with missing features directly since we have a large number of data 
 #### 2. Remove outliers:  
 Remove locations outside New York City, unreasonable number of passengers, and fare amounts are considered outliers.
 (1) Remove passengers > 7 and < 1  
-![passenger](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/number%20of%20passenger.jpg)
+![passenger](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/number%20of%20passenger.png)
 (2) Remove the position outside the New York City  
 (3) Remove ‘fare_amount’ < 2.5 and > 500
 (4) Remove some locations on the water
