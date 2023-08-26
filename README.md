@@ -10,3 +10,26 @@ Remove data with missing features directly since we have a large number of data 
 Remove locations outside New York City, unreasonable number of passengers, and fare amounts are considered outliers.
 (1) Remove passengers > 7 and < 1  
 (2) Remove the position outside the New York City  
+(3) Remove ‘fare_amount’ < 2.5 and > 500
+(4) Remove some locations on the water
+#### 3. Process time features:  
+The feature includes time and date information. Split ‘pickup_datatime’ into 4 new features: year, month, weekday, and hour. This approach adds useful information as features, they adds complexity to the model to enhance the precision of its predictions.  
+#### 4. Calculate Haversine distance:  
+The Haversine distance is the angular distance between two points on the surface of a sphere, it can be calculated with given longitude and latitude.
+#### 5. Calculate Chebyshev distance:  
+Since New York City is built in a grid plan, Chebyshev distance can be used to represent the distance between 2 locations in NYC.  
+#### 6. Add airports:  
+Help the models to capture the proximity of pickup or drop-off locations to predefined landmarks.
+(1) JFK Airport: Longitude -73.7781, Latitude 40.6413  
+(2) LGA Airport: Longitude -73.8740, Latitude 40.7769  
+(3) EWR Airport: Longitude -74.1745, Latitude 40.6895  
+#### 7. Remove useless items:  
+‘key’ and 'pickup_datatime’. The feature ‘key’ is seen as the ID of the trips, and ‘pickup_datatime’ has turned into 4 new features: year, month, weekday, and hour.  
+#### 8. Observe the correlation between features and target:  
+
+## Model
+#### models comparison
+#### Ensemble
+
+
+
