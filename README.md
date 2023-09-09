@@ -1,14 +1,14 @@
 # Kaggle-New-York-City-Taxi-Prediction
-Tasked with predicting the fare amount for a taxi ride in New York City given the pickup and drop-off location. 
+Tasked with predicting the fare amount for a taxi ride in New York City, given the pickup and drop-off location.
 
 ## Data Processing
-There is 55M data, we selected 6M to 15M of them for training due to lack of memories. Data preprocessing plays an essential role in the successful prediction of a model.
+We have a dataset of 55 million records, but due to memory constraints, we have selected a subset ranging from 6 million to 15 million for training purposes. Data preprocessing is a critical step in ensuring the successful performance of our predictive model.  
 
-#### 1. Remove missing data:  
-Remove data with missing features directly since we have a large number of data collections.  
-#### 2. Remove outliers:  
-Remove locations outside New York City, unreasonable number of passengers, and fare amounts are considered outliers.  
-(1) Remove passengers > 7 and < 1  
+#### 1. Removing missing data:  
+We will directly remove records with missing features, given the large size of our dataset.  
+#### 2. Removing outliers:  
+To improve the quality of our dataset, we will eliminate data points that fall outside the geographic boundaries of New York City, as well as those with unreasonable passenger counts or fare amounts, which are considered outliers.  
+(1) Remove records with passengers > 7 or < 1 to address passenger count outliers.  
 ![passenger](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/number%20of%20passenger.png)  
 (2) Remove the position outside the New York City  
 ![location](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/location.png)  
@@ -17,7 +17,7 @@ Remove locations outside New York City, unreasonable number of passengers, and f
 (4) Remove some locations on the water  
 ![on water](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/on%20water.png)  
 #### 3. Process time features:  
-The feature includes time and date information. Split ‘pickup_datatime’ into 4 new features: year, month, weekday, and hour. This approach adds useful information as features, they adds complexity to the model to enhance the precision of its predictions.  
+The feature includes time and date information. Split ‘pickup_datatime’ into 4 new features: year, month, weekday, and hour. This approach adds useful information as features, they add complexity to the model to enhance the precision of its predictions.  
 #### 4. Calculate Haversine distance:  
 The Haversine distance is the angular distance between two points on the surface of a sphere, it can be calculated with given longitude and latitude.  
 ![haversine](https://github.com/hsieh672/Kaggle-New-York-City-Taxi-Prediction/blob/main/image/haversine.png)  
